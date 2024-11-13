@@ -6,37 +6,37 @@
 ### Initializes directory to write logs, as well as, log file: 
 - Initializes a directory in the working directory of the parent script named "parent_app_name.sh" without the extention. 
  - i.e.
-  - parent_app_name
+ - - parent_app_name
 ### Generates JSON format logs: 
 - Provides a constructor to generate a log entry in JSON format.
  - Params
-  - level
-   - indicates the logging level. this is currently not used for any filtering yet.
-  - message
-   - the information you would like to have the shell_script_logger to write to the log event
-  - full_file
-   - the $full_file_name on dependencies location
+ - - level
+ - - - indicates the logging level. this is currently not used for any filtering yet.
+ - - message
+ - - - the information you would like to have the shell_script_logger to write to the log event
+ - - full_file
+ - - - the $full_file_name on dependencies location
 - i.e.
- - info "informational message here" $full_file_name
+- - info "informational message here" $full_file_name
 - Sample:
- - "{\"timestamp\":$timestamp, \"loglevel\":\"$level\", \"message\":\"$message\"}"
+- - "{\"timestamp\":$timestamp, \"loglevel\":\"$level\", \"message\":\"$message\"}"
 
 
 ## Dependencies:
 - Bash Version: 
- - Tested on BASH 3.2.57
+- - Tested on BASH 3.2.57
 - Two global variables must be passed to the parent app before the source:
- - app_name=$(basename "${BASH_SOURCE[0]}" .sh)
- - full_file_name=$(basename "${BASH_SOURCE[0]}")
+- - app_name=$(basename "${BASH_SOURCE[0]}" .sh)
+- - full_file_name=$(basename "${BASH_SOURCE[0]}")
 
 
 ## Installation
 - Clone the repository:
- - git clone https://github.com/username/project-name.git
+- - git clone https://github.com/username/project-name.git
 - Navigate to shell_script_logger:
- - cd shell_script_logger
+- - cd shell_script_logger
 - Make the script executable:
- - chmod +x shell_script_logger.sh
+- - chmod +x shell_script_logger.sh
 
 ## Usage
 - Source code in other shell script:
@@ -53,20 +53,20 @@
 
 ## Logging
 - Path to log: 
- - ./$app_name/$app_name.sh.log
+- - ./$app_name/$app_name.sh.log
 - Formats:
- - json
+- - json
 
 ## Contributing
 Please feel free to. Follow these steps:
 
 ### Fork the project:
 - Create a new branch 
- - git checkout -b feature/new-feature
+- - git checkout -b feature/new-feature
 - Commit your changes 
- - git commit -m 'Add new feature'
+- - git commit -m 'Add new feature'
 - Push to the branch 
- - git push origin feature/new-feature
+- - git push origin feature/new-feature
 - Open apull request.
 
 ## License
